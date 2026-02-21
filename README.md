@@ -24,10 +24,10 @@ Enter assets as a comma-separated list in the settings, e.g. `bitcoin,dow,AAPL,g
 
 ## Installation
 
-In the InkyPi web UI, go to **Settings → Plugins → Install Third-Party Plugin** and enter this repository URL:
+Run the following command on your Raspberry Pi:
 
-```
-https://github.com/BloodAkatsuki/InkyPi-FinanceTracker
+```bash
+inkypi plugin install finance_tracker https://github.com/BloodAkatsuki/InkyPi-FinanceTracker
 ```
 
 ## Status
