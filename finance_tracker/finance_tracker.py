@@ -123,6 +123,13 @@ class FinanceTracker(BasePlugin):
         if not assets_data:
             raise RuntimeError("No asset data could be retrieved. Check your asset list.")
 
+        for asset in assets_data:
+            price = asset.get("price")
+            if price is not None:
+                asset["price_display"] = f"{price:,.2f}" if price < 10000 else f"{price:,.0f}"
+            else:
+                asset["price_display"] = None
+
         template_params = {
             "assets": assets_data,
             "currency": currency.upper(),
