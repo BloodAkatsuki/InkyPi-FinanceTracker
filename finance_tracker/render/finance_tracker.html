@@ -45,7 +45,7 @@
                     <svg viewBox="0 0 {{ asset.sparkline|length - 1 }} 20" preserveAspectRatio="none" class="sparkline-svg">
                         <polyline
                             fill="none"
-                            stroke="black"
+                            stroke="currentColor"
                             stroke-width="1.5"
                             points="{% for val in asset.sparkline %}{{ loop.index0 }},{{ 20 - ((val - ns.min_val) / range_val * 18 + 1) }}{% if not loop.last %} {% endif %}{% endfor %}"
                         />
